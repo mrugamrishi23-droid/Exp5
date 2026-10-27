@@ -6,7 +6,7 @@ pipeline {
                 sh 'javac HelloWorld.java'
             }
         }
-        stage('Run Python') {
+        stage('Run') {
             steps {
                 sh 'java HelloWorld'
             }
