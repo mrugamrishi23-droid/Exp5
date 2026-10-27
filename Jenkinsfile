@@ -1,12 +1,14 @@
 pipeline {
     agent any
+
     stages {
-        stage('compile'){
-            steps{
-                sh 'javac HelloWorld.java'
+        stage('Compile Java') {
+            steps {
+                sh 'javac --release 17 HelloWorld.java'
             }
         }
-        stage('Run java') {
+
+        stage('Run Java') {
             steps {
                 sh 'java HelloWorld'
             }
